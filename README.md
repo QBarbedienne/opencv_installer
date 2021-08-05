@@ -3,6 +3,7 @@ auto install of opencv cuda
 
 ## required
 
+- Please download this .zip file and unzip it in the >opencv_installer FOLDER< https://drive.google.com/file/d/1v6qdJ5ZdMewfjpZ6rLpz3AB2gNIHNW8W/view?usp=sharing
 - Python 3.6 or above ( https://www.python.org/downloads/release/python-365/ )
 - Visual studio 19 + C++ ( tutorial : https://docs.microsoft.com/fr-fr/cpp/build/vscpp-step-0-installation?view=msvc-160 )
 
