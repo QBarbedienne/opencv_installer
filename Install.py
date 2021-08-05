@@ -105,7 +105,7 @@ class Page1(QWizardPage):
         self.text = QLabel()
         self.text.setText("Installation de Cuda")
         self.CudaImage = QLabel()
-        pixmap = QPixmap('Cuda.png')
+        pixmap = QPixmap('img\Cuda.png')
         self.CudaImage.setPixmap(pixmap)
         self.CudaImage.setAlignment(Qt.AlignCenter)
         self.GPUtext = QLabel()
@@ -132,7 +132,7 @@ class Page1(QWizardPage):
         if GPU.is10XX() | GPU.is20XX():
             pathCuda = os.path.join(cwd, "cuda_10.1.105_win10_network.exe")
         elif GPU.is30XX():
-            pathCuda = os.path.join(cwd, "cuda_10.1.105_win10_network.exe")
+            pathCuda = os.path.join(cwd, "cuda_11.3.0_win10_network.exe")
         else:
             return
         os.startfile(pathCuda)
@@ -153,7 +153,7 @@ class Page2(QWizardPage):
         self.text = QLabel()
         self.text.setText("Installation de Cuda update 1")
         self.CudaImage = QLabel()
-        pixmap = QPixmap('Cuda.png')
+        pixmap = QPixmap('img\Cuda.png')
         self.CudaImage.setPixmap(pixmap)
         self.CudaImage.setAlignment(Qt.AlignCenter)
         self.installButton = QPushButton()
@@ -182,7 +182,7 @@ class Page3(QWizardPage):
         self.text = QLabel()
         self.text.setText("Installation de Cuda update 2")
         self.CudaImage = QLabel()
-        pixmap = QPixmap('Cuda.png')
+        pixmap = QPixmap('img\Cuda.png')
         self.CudaImage.setPixmap(pixmap)
         self.CudaImage.setAlignment(Qt.AlignCenter)
         self.installButton = QPushButton()
@@ -211,7 +211,7 @@ class Page4(QWizardPage):
         self.text = QLabel()
         self.text.setText("Installation de cuDNN")
         self.CudNNImage = QLabel()
-        pixmap = QPixmap('cuDNN.png')
+        pixmap = QPixmap('img\cuDNN.png')
         self.CudNNImage.setPixmap(pixmap)
         self.CudNNImage.setAlignment(Qt.AlignCenter)
         self.search = FolderBrowser()
@@ -241,7 +241,7 @@ class Page4(QWizardPage):
         if GPU.is10XX() | GPU.is20XX():         
             source_dir = os.path.join(os.getcwd() ,"cudnn-10.1-windows10-x64-v7.6.5.32\cuda")
         elif GPU.is30XX():
-            source_dir = os.path.join(os.getcwd() ,"cudnn-10.1-windows10-x64-v7.6.5.32\cuda")
+            source_dir = os.path.join(os.getcwd() ,"cudnn-11.3-windows-x64-v8.2.0.53\cuda")
         for root, directories, files in os.walk(source_dir):
             for name in directories:
                 relPath = os.path.relpath(root, start=source_dir)
@@ -257,6 +257,7 @@ class Page4(QWizardPage):
                         os.chmod(dst, 0o777)
                         os.remove(dst)
                     shutil.copy(src, dst)
+        print('done')
         self.ShowNext = True
 
 class Page5(QWizardPage):
@@ -266,7 +267,7 @@ class Page5(QWizardPage):
         self.text = QLabel()
         self.text.setText("Build d'OpenCV")
         self.OpenCVImage = QLabel()
-        pixmap = QPixmap('OpenCV.png')
+        pixmap = QPixmap('img\OpenCV.png')
         self.OpenCVImage.setPixmap(pixmap)
         self.OpenCVImage.setAlignment(Qt.AlignCenter)
         self.textEdit = QTextEdit()
