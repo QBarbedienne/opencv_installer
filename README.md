@@ -1,5 +1,13 @@
 # opencv_installer
 auto install of opencv cuda
+## Use Setup
+
+You can use a setup which will install everything for you. You can download it here :
+https://drive.google.com/file/d/1-lhDI7VHxrbI013r5Cn8krNPLmjDQ-7c/view?usp=sharing
+
+Then you'll have to go in shortcut by clicking here :
+
+![plot](fig_readme/fig1.png)
 
 ## required
 
