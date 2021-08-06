@@ -33,6 +33,6 @@ see for potential issues bellow.
 just start install.bat and everything should be good
 
 ----------------------------------------------------------------------
-## Potentiel issues
+## Potential issues
 
 While installing Cuda 10.1 and the 2 upgrades, you should have an issue where it speaks about a process which is not closed. Please wait a bit before try again (it's just a windows issue).
